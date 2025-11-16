@@ -1,4 +1,3 @@
-<!-- UKRave • Brevo direct-post form (dark) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +9,6 @@
     --bg:#000; --fg:#fff; --muted:#bbb; --panel:#0a0a0a;
     --input-bg:#111; --input-bd:#444; --input-fg:#fff;
     --btn-bg:#fff; --btn-fg:#000; --btn-bd:#fff;
-    --err-bg:#301616; --err-fg:#ffb3b3; --ok-bg:#10331f; --ok-fg:#ddffea;
   }
   html,body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
   .wrap{max-width:560px;margin:40px auto;padding:24px}
@@ -18,7 +16,6 @@
   h1{font-size:28px;margin:0 0 10px}
   p.lead{color:var(--muted);margin:0 0 18px}
   label{display:block;font-weight:700;margin:14px 0 6px}
-  .input, .checkboxes, button{width:100%}
   .input input[type="email"]{
     width:100%; box-sizing:border-box; background:var(--input-bg); color:var(--input-fg);
     border:1px solid var(--input-bd); border-radius:10px; padding:12px 14px; font-size:16px;
@@ -30,58 +27,49 @@
   button{
     margin-top:16px; background:var(--btn-bg); color:var(--btn-fg);
     border:1px solid var(--btn-bd); border-radius:10px; padding:12px 16px;
-    font-weight:800; letter-spacing:.2px; cursor:pointer
+    font-weight:800; letter-spacing:.2px; cursor:pointer; width:100%;
   }
   .fine{color:var(--muted);font-size:12px;margin-top:10px}
   .badge{margin-top:16px;color:var(--muted);font-size:12px;text-align:center}
-  .center{display:block;text-align:center}
   .hero{display:block;max-width:100%;height:auto;border-radius:12px;border:1px solid #222;margin-bottom:14px}
 </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <!-- Optional header image -->
       <img class="hero" src="https://img.mailinblue.com/10207116/images/content_library/original/691a43e0dd1aab7bbc032a57.png" alt="UKRave Weekly" />
-
       <h1>Weekly Rave Update</h1>
-      <p class="lead">Stay on top of underground nights, big lineups and key local updates — once a week.</p>
+      <p class="lead">Underground nights, big lineups & local scene updates — once a week.</p>
 
-      <!-- DIRECT POST: no external JS, full CSS control -->
       <form
         action="https://3d132773.sibforms.com/serve/MUIFANbhiTKzj3dd38swosnT9x8qwmLZkYG75ixQo6mJYpqY4fjm0VIM3lHNhdR1X5BvOboyP3pE5KGV5xYEdP_OMcbojQpjiNZdhGx7bxv4Ix_X0yBNJ2SsK7tmdWGGuiXwC9lZt0Z1rWoxnpESbhBFeWUEWqtI1dOFuoisMmY56bWwG06Iaiw-P-viCcPu0mqmnarlt2G0P9PWkQ=="
-        method="post"
-        accept-charset="utf-8"
-        target="_top"
-      >
+        method="post" accept-charset="utf-8" target="_top">
         <label for="EMAIL">Email</label>
         <div class="input">
           <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" required />
         </div>
 
-        <label>Which city emails do you want?</label>
+        <label style="margin-top:10px">Which city emails do you want?</label>
         <div class="checkboxes">
-          <!-- Use YOUR list IDs here (these 3/4/5 came from your Brevo form) -->
+          <!-- Use your actual list IDs (these 4/3/5 are from your Brevo form) -->
           <label><input type="checkbox" name="lists_25[]" value="4" /> Bristol</label>
           <label><input type="checkbox" name="lists_25[]" value="3" /> London</label>
           <label><input type="checkbox" name="lists_25[]" value="5" /> Manchester</label>
         </div>
 
-        <!-- Optional explicit opt-in -->
-        <label class="center" style="margin-top:14px;font-weight:600">
+        <label style="margin-top:12px;font-weight:600">
           <input type="checkbox" name="OPT_IN" value="1" style="transform:scale(1.15);vertical-align:-2px;margin-right:8px" />
-          Yes, send me the weekly update (you can unsubscribe any time).
+          Yes, send me the weekly update (unsubscribe any time).
         </label>
 
-        <!-- Required hidden fields Brevo accepts -->
         <input type="hidden" name="locale" value="en" />
         <input type="text" name="email_address_check" value="" style="display:none" />
 
         <button type="submit">Subscribe</button>
-        <div class="fine">We’ll only email once a week. No spam.</div>
+        <div class="fine">We email once a week. No spam.</div>
       </form>
 
-      <div class="badge">Independent &amp; non-profit — made for r/ukrave</div>
+      <div class="badge">Independent &amp; non-profit — for r/ukrave • build v3</div>
     </div>
   </div>
 </body>
