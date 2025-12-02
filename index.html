@@ -9,21 +9,24 @@
     @font-face {
       font-display: block;
       font-family: Roboto;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
     }
 
     @font-face {
       font-display: fallback;
       font-family: Roboto;
       font-weight: 600;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
     }
 
     @font-face {
       font-display: fallback;
       font-family: Roboto;
       font-weight: 700;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
     }
 
     body {
@@ -38,8 +41,16 @@
       border-radius: 12px;
       padding: 30px;
       max-width: 500px;
-      margin: auto;
+      margin: 40px auto;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero {
+      display: block;
+      width: 100%;       /* make it fill the card width */
+      height: auto;      /* keep aspect ratio */
+      border-radius: 12px;
+      margin: 0 0 20px 0;
     }
 
     h1 {
@@ -47,14 +58,14 @@
       font-weight: 700;
       text-align: center;
       color: #3C4858;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
 
     p.lead {
       font-size: 16px;
       text-align: center;
       color: #6e7d8b;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     label {
@@ -75,7 +86,7 @@
     }
 
     .checkboxes {
-      margin-top: 15px;
+      margin-top: 8px;
     }
 
     .checkboxes label {
@@ -120,6 +131,7 @@
       font-size: 14px;
       color: #6e7d8b;
       text-align: center;
+      margin-top: 8px;
     }
 
     .badge {
@@ -129,10 +141,11 @@
       margin-top: 20px;
     }
 
-    /* Styling for small screen/mobile */
+    /* Mobile tweaks */
     @media (max-width: 600px) {
       .sib-form-container {
         padding: 20px;
+        margin: 20px auto;
       }
 
       h1 {
@@ -162,18 +175,33 @@
 </head>
 <body>
   <div class="sib-form-container">
-    <img class="hero" src="https://img.mailinblue.com/10207116/images/content_library/original/691a43e0dd1aab7bbc032a57.png" alt="UKRave Weekly" />
-    <h1>Weekly Rave Update</h1>
-    <p class="lead">Underground nights, big lineups & local scene updates — once a week.</p>
+    <img
+      class="hero"
+      src="https://img.mailinblue.com/10207116/images/content_library/original/691a43e0dd1aab7bbc032a57.png"
+      alt="UKRave Weekly"
+    />
 
-    <form action="https://3d132773.sibforms.com/serve/MUIFANbhiTKzj3dd38swosnT9x8qwmLZkYG75ixQo6mJYpqY4fjm0VIM3lHNhdR1X5BvOboyP3pE5KGV5xYEdP_OMcbojQpjiNZdhGx7bxv4Ix_X0yBNJ2SsK7tmdWGGuiXwC9lZt0Z1rWoxnpESbhBFeWUEWqtI1dOFuoisMmY56bWwG06Iaiw-P-viCcPu0mqmnarlt2G0P9PWkQ=="
-      method="post" accept-charset="utf-8" target="_top">
+    <h1>Weekly Rave Update</h1>
+    <p class="lead">Underground nights, big lineups &amp; local scene updates — once a week.</p>
+
+    <form
+      action="https://3d132773.sibforms.com/serve/MUIFANbhiTKzj3dd38swosnT9x8qwmLZkYG75ixQo6mJYpqY4fjm0VIM3lHNhdR1X5BvOboyP3pE5KGV5xYEdP_OMcbojQpjiNZdhGx7bxv4Ix_X0yBNJ2SsK7tmdWGGuiXwC9lZt0Z1rWoxnpESbhBFeWUEWqtI1dOFuoisMmY56bWwG06Iaiw-P-viCcPu0mqmnarlt2G0P9PWkQ=="
+      method="post"
+      accept-charset="utf-8"
+      target="_top"
+    >
 
       <!-- Email Input -->
       <div class="sib-form-block">
         <label for="EMAIL">Enter your email address to subscribe</label>
         <div class="sib-input">
-          <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" required />
+          <input
+            type="email"
+            id="EMAIL"
+            name="EMAIL"
+            placeholder="you@example.com"
+            required
+          />
         </div>
       </div>
 
@@ -199,7 +227,7 @@
       <div class="sib-form-block">
         <button type="submit">Subscribe</button>
       </div>
-      
+
       <div class="fine">We email once a week. No spam.</div>
     </form>
 
