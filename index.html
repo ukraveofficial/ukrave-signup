@@ -71,18 +71,14 @@
 
     /* Updated mobile-friendly checkbox layout */
     .checkboxes {
-      display: grid;
-      grid-template-columns: 1fr; /* Single column layout for mobile */
-      gap: 10px;
+      display: block; /* Make the checkboxes take full width */
       margin-top: 6px;
     }
 
     .checkboxes label {
       font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0;
+      display: block; /* Each checkbox will be on its own line for easier tapping on mobile */
+      margin: 8px 0;
     }
 
     .checkboxes input {
@@ -153,7 +149,7 @@
       <form
         action="https://3d132773.sibforms.com/serve/MUIFANbhiTKzj3dd38swosnT9x8qwmLZkYG75ixQo6mJYpqY4fjm0VIM3lHNhdR1X5BvOboyP3pE5KGV5xYEdP_OMcbojQpjiNZdhGx7bxv4Ix_X0yBNJ2SsK7tmdWGGuiXwC9lZt0Z1rWoxnpESbhBFeWUEWqtI1dOFuoisMmY56bWwG06Iaiw-P-viCcPu0mqmnarlt2G0P9PWkQ=="
         method="post" accept-charset="utf-8" target="_top">
-        
+
         <label for="EMAIL">Email</label>
         <div class="input">
           <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" required />
