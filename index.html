@@ -33,6 +33,18 @@
   .badge{margin-top:16px;color:var(--muted);font-size:12px;text-align:center}
   .hero{display:block;max-width:100%;height:auto;border-radius:12px;border:1px solid #222;margin-bottom:14px}
 </style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function(e) {
+      const checkboxes = document.querySelectorAll('input[name="lists_25[]"]:checked');
+      if (checkboxes.length === 0) {
+        alert("Please select at least one city.");
+        e.preventDefault();  // Prevent form submission
+      }
+    });
+  });
+</script>
 </head>
 <body>
   <div class="wrap">
@@ -51,7 +63,6 @@
 
         <label style="margin-top:10px">Which city emails do you want?</label>
         <div class="checkboxes">
-          <!-- Use your actual list IDs (these 4/3/5 are from your Brevo form) -->
           <label><input type="checkbox" name="lists_25[]" value="4" /> Bristol</label>
           <label><input type="checkbox" name="lists_25[]" value="3" /> London</label>
           <label><input type="checkbox" name="lists_25[]" value="5" /> Manchester</label>
