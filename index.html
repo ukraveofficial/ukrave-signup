@@ -1,50 +1,147 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>UKRave Weekly Signup</title>
-<style>
-  :root{
-    --bg:#000; --fg:#fff; --muted:#bbb; --panel:#0a0a0a;
-    --input-bg:#111; --input-bd:#444; --input-fg:#fff;
-    --btn-bg:#fff; --btn-fg:#000; --btn-bd:#fff;
-  }
-  html,body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-  .wrap{max-width:560px;margin:40px auto;padding:24px}
-  .card{background:var(--panel);border:1px solid #222;border-radius:12px;padding:22px}
-  h1{font-size:28px;margin:0 0 10px}
-  p.lead{color:var(--muted);margin:0 0 18px}
-  label{display:block;font-weight:700;margin:14px 0 6px}
-  .input input[type="email"]{
-    width:100%; box-sizing:border-box; background:var(--input-bg); color:var(--input-fg);
-    border:1px solid var(--input-bd); border-radius:10px; padding:12px 14px; font-size:16px;
-  }
-  .input input::placeholder{color:var(--muted)}
-  .checkboxes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
-  .checkboxes label{font-weight:600;display:flex;align-items:center;gap:8px;margin:0}
-  .checkboxes input{accent-color:#fff; transform:scale(1.15)}
-  button{
-    margin-top:16px; background:var(--btn-bg); color:var(--btn-fg);
-    border:1px solid var(--btn-bd); border-radius:10px; padding:12px 16px;
-    font-weight:800; letter-spacing:.2px; cursor:pointer; width:100%;
-  }
-  .fine{color:var(--muted);font-size:12px;margin-top:10px}
-  .badge{margin-top:16px;color:var(--muted);font-size:12px;text-align:center}
-  .hero{display:block;max-width:100%;height:auto;border-radius:12px;border:1px solid #222;margin-bottom:14px}
-</style>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector("form");
-    form.addEventListener("submit", function(e) {
-      const checkboxes = document.querySelectorAll('input[name="lists_25[]"]:checked');
-      if (checkboxes.length === 0) {
-        alert("Please select at least one city.");
-        e.preventDefault();  // Prevent form submission
-      }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UKRave Weekly Signup</title>
+  <style>
+    :root {
+      --bg: #000;
+      --fg: #fff;
+      --muted: #bbb;
+      --panel: #0a0a0a;
+      --input-bg: #111;
+      --input-bd: #444;
+      --input-fg: #fff;
+      --btn-bg: #fff;
+      --btn-fg: #000;
+      --btn-bd: #fff;
+    }
+
+    html, body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .wrap {
+      max-width: 560px;
+      margin: 40px auto;
+      padding: 24px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 0 0 10px;
+    }
+
+    p.lead {
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin: 14px 0 6px;
+    }
+
+    .input input[type="email"] {
+      width: 100%;
+      box-sizing: border-box;
+      background: var(--input-bg);
+      color: var(--input-fg);
+      border: 1px solid var(--input-bd);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 16px;
+    }
+
+    .input input::placeholder {
+      color: var(--muted);
+    }
+
+    /* Updated mobile-friendly checkbox layout */
+    .checkboxes {
+      display: grid;
+      grid-template-columns: 1fr; /* Single column layout for mobile */
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .checkboxes label {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+    }
+
+    .checkboxes input {
+      accent-color: #fff;
+      width: 25px; /* Larger checkboxes for touch */
+      height: 25px;
+    }
+
+    .checkboxes input:active {
+      background-color: #444; /* Touch feedback */
+    }
+
+    button {
+      margin-top: 16px;
+      background: var(--btn-bg);
+      color: var(--btn-fg);
+      border: 1px solid var(--btn-bd);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .fine {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .badge {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .hero {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #222;
+      margin-bottom: 14px;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function (e) {
+        const checkboxes = document.querySelectorAll('input[name="lists_25[]"]:checked');
+        if (checkboxes.length === 0) {
+          alert("Please select at least one city.");
+          e.preventDefault(); // Prevent form submission
+        }
+      });
     });
-  });
-</script>
+  </script>
 </head>
 <body>
   <div class="wrap">
@@ -56,6 +153,7 @@
       <form
         action="https://3d132773.sibforms.com/serve/MUIFANbhiTKzj3dd38swosnT9x8qwmLZkYG75ixQo6mJYpqY4fjm0VIM3lHNhdR1X5BvOboyP3pE5KGV5xYEdP_OMcbojQpjiNZdhGx7bxv4Ix_X0yBNJ2SsK7tmdWGGuiXwC9lZt0Z1rWoxnpESbhBFeWUEWqtI1dOFuoisMmY56bWwG06Iaiw-P-viCcPu0mqmnarlt2G0P9PWkQ=="
         method="post" accept-charset="utf-8" target="_top">
+        
         <label for="EMAIL">Email</label>
         <div class="input">
           <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" required />
