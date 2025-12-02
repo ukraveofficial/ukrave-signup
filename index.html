@@ -1,31 +1,154 @@
-<div class="sib-checkbox-group sib-form-block" data-required="true">
-  <div class="form__entry entry_mcq">
-    <div class="form__label-row ">
-      <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; font-family:Helvetica, sans-serif; color:#3c4858;" data-required="*">Which city would you like to receive emails for?</label>
-      <div style="padding-left: 10px;">
-        <div class="entry__choice">
-          <label class="checkbox__label">
-            <input type="checkbox" class="input_replaced" name="lists_25[]" value="4" data-required="true" />
-            <span class="checkbox checkbox_tick_positive"></span>
-            <span style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858;">BRISTOL</span>
-          </label>
-        </div>
-        <div class="entry__choice">
-          <label class="checkbox__label">
-            <input type="checkbox" class="input_replaced" name="lists_25[]" value="3" data-required="true" />
-            <span class="checkbox checkbox_tick_positive"></span>
-            <span style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858;">LONDON</span>
-          </label>
-        </div>
-        <div class="entry__choice">
-          <label class="checkbox__label">
-            <input type="checkbox" class="input_replaced" name="lists_25[]" value="5" data-required="true" />
-            <span class="checkbox checkbox_tick_positive"></span>
-            <span style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858;">MANCHESTER</span>
-          </label>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UKRave Weekly Signup</title>
+
+  <!-- Brevo Recommended Styles for Form -->
+  <style>
+    @font-face {
+      font-display: block;
+      font-family: Roboto;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+    }
+
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 600;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+    }
+
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 700;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+    }
+
+    #sib-container input:-ms-input-placeholder {
+      text-align: left;
+      font-family: Helvetica, sans-serif;
+      color: #c0ccda;
+    }
+
+    #sib-container input::placeholder {
+      text-align: left;
+      font-family: Helvetica, sans-serif;
+      color: #c0ccda;
+    }
+
+    #sib-container textarea::placeholder {
+      text-align: left;
+      font-family: Helvetica, sans-serif;
+      color: #c0ccda;
+    }
+
+    #sib-container a {
+      text-decoration: underline;
+      color: #2BB2FC;
+    }
+
+    /* Customizing checkbox layout */
+    .checkboxes {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .checkboxes label {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+    }
+
+    .checkboxes input {
+      accent-color: #fff;
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+    }
+
+    button {
+      background: #3E4857;
+      color: #fff;
+      border-radius: 3px;
+      padding: 12px 20px;
+      font-weight: 700;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .sib-form-container {
+      text-align: center;
+      background-color: #EFF2F7;
+      padding: 20px;
+      border-radius: 3px;
+      max-width: 540px;
+      margin: auto;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px 0;
+      border-radius: 12px;
+    }
+
+  </style>
+
+  <!-- Brevo Form Styling -->
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+</head>
+<body>
+  <div class="sib-form-container">
+    <img class="hero" src="https://img.mailinblue.com/10207116/images/content_library/original/691a43e0dd1aab7bbc032a57.png" alt="UKRave Weekly" />
+    <h1>Your Weekly Rave Update</h1>
+    <p class="lead">Underground nights, big lineups & local scene updates — once a week.</p>
+
+    <form action="https://3d132773.sibforms.com/serve/MUIFANbhiTKzj3dd38swosnT9x8qwmLZkYG75ixQo6mJYpqY4fjm0VIM3lHNhdR1X5BvOboyP3pE5KGV5xYEdP_OMcbojQpjiNZdhGx7bxv4Ix_X0yBNJ2SsK7tmdWGGuiXwC9lZt0Z1rWoxnpESbhBFeWUEWqtI1dOFuoisMmY56bWwG06Iaiw-P-viCcPu0mqmnarlt2G0P9PWkQ=="
+      method="post" accept-charset="utf-8" target="_top">
+
+      <!-- Email Input -->
+      <div class="sib-form-block">
+        <label for="EMAIL" style="font-size:16px;">Enter your email address to subscribe</label>
+        <div class="sib-input">
+          <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" required />
         </div>
       </div>
-    </div>
-    <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
+
+      <!-- City Selection Checkboxes -->
+      <div class="sib-form-block">
+        <label style="font-size:16px; font-weight:700;">Which city would you like to receive emails for?</label>
+        <div class="checkboxes">
+          <label><input type="checkbox" name="lists_25[]" value="4" /> Bristol</label>
+          <label><input type="checkbox" name="lists_25[]" value="3" /> London</label>
+          <label><input type="checkbox" name="lists_25[]" value="5" /> Manchester</label>
+        </div>
+      </div>
+
+      <!-- Opt-In Checkbox -->
+      <div class="sib-form-block">
+        <label style="font-size:16px; font-weight:700;">
+          <input type="checkbox" name="OPT_IN" value="1" required />
+          Yes, send me the weekly update (unsubscribe any time).
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="sib-form-block">
+        <button type="submit">Subscribe</button>
+      </div>
+      
+      <div class="fine">We email once a week. No spam.</div>
+    </form>
+
+    <div class="badge">Independent &amp; non-profit — for r/ukrave</div>
   </div>
-</div>
+
+  <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
+</body>
+</html>
